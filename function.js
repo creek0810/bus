@@ -5,7 +5,7 @@ function choose_route(num) {
         $("#chose").html("<input type=\"button\" class=\"btn btn-primary\" value=\"去程\" onclick=\"querry_route(0)\"><input type=\"button\" class=\"btn btn-primary\" value=\"回程\" onclick=\"querry_route(1)\">");
 }
 function querry_route(direction){
-    link="http://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/Keelung?" +
+    link="https://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/Keelung?" +
         "$filter=RouteUID eq \'" + 
         Stopdata[chose]["RouteUID"] + 
         "\' and Direction eq \'" + 
@@ -41,7 +41,7 @@ function querry_route(direction){
 }
 function querry_busName() {
 	var key = document.getElementById("keyword");
-    link="http://ptx.transportdata.tw/MOTC/v2/Bus/StopOfRoute/City/Keelung?" + 
+    link="https://ptx.transportdata.tw/MOTC/v2/Bus/StopOfRoute/City/Keelung?" + 
          "$select=RouteUID,Stops,RouteName&"+
 	     "$filter=contains(RouteName/Zh_tw,\'" + key.value + "\') eq true" +
 	     "&$format=json";
