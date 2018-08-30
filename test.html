@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="function.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>基隆公車查詢</h2>
+  <form>
+    <div class="form-group">
+      <div class="col-xs-3">
+        <label for="keyword">輸入關鍵字</label>
+        <input type="text" class="form-control" id="keyword">
+        <input type="button" class="btn btn-primary" value="Submit" onclick="querry_busName()">
+      </div>
+    </div>
+  </form>
+  <form >
+    <div>
+      <div id="busName">
+          
+      </div>
+      <div id="chose">
+          
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <form id="route">
+  </form>
+</div>
+</body>
+</html>
