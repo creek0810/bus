@@ -40,7 +40,8 @@ function querry_route(direction){
     })
 }
 function querry_busName() {
-	var key = document.getElementById("keyword");
+    var key = document.getElementById("keyword");
+    alert(key);
     link="https://ptx.transportdata.tw/MOTC/v2/Bus/StopOfRoute/City/Keelung?" + 
          "$select=RouteUID,Stops,RouteName&"+
 	     "$filter=contains(RouteName/Zh_tw,\'" + key.value + "\') eq true" +
@@ -51,6 +52,7 @@ function querry_busName() {
         url:link,
         dataType:"json",
         success:function(msg){
+	    alert("hi");
             Stopdata = msg;
             txt = "";
             for (var i=0;i<msg.length;i+=2){ 
